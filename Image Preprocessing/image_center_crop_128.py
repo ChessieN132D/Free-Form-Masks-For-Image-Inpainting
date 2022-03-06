@@ -1,8 +1,6 @@
-import pandas as pd
 import os
 from torchvision.transforms import CenterCrop
-import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image
 
 completed_processing = set()
 
@@ -11,10 +9,6 @@ output_dir = "C:/Users/jessi/Documents/Master_Courses/MIE1517_IDL/Project/datase
 
 i = 0
 nb_excluded = 0
-
-import time
-
-start = time.time()
 
 with os.scandir(source_dir) as it:
     for item in it:
@@ -38,10 +32,7 @@ with os.scandir(source_dir) as it:
         if i % 50 == 0:
             print(i)
 
-end = time.time()
-print(end - start)
-print(nb_excluded)
-print(i)
+
 
 
 
