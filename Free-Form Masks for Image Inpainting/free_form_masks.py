@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw
 np.random.seed(37)
 
 
-# Create the mask
+# Create the mask.
 def mask(im_height, im_width):
     mask = Image.new('L', (im_width, im_height), 0)
     draw = ImageDraw.Draw(mask)
